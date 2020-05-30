@@ -115,10 +115,13 @@ class Controller extends BlockController
 
 	public function registerViewAssets($outputContent = '') {
 		$this->requireAsset('javascript', 'jquery');
+
 		$content=<<<HERE
 
 $(document).ready(function () {
-	$('a.zoomImage').fancyZoom();
+	if (typeof $.fn.fancyZoom === 'function'){ 
+		$('a.zoomImage').fancyZoom();
+	}
 });
 
 HERE;
