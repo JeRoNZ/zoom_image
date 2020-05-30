@@ -118,10 +118,17 @@ class Controller extends BlockController
 
 		$content=<<<HERE
 
-$(document).ready(function () {
+function deferLoad() {
 	if (typeof $.fn.fancyZoom === 'function'){ 
 		$('a.zoomImage').fancyZoom();
-	}
+	} else {
+    	setTimeout(function () {
+        	deferLoad()
+        }, 50);
+    }
+}
+$(document).ready(function () {
+	deferLoad();
 });
 
 HERE;
