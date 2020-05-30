@@ -1,0 +1,51 @@
+/* Zoom image */
+#zoom {
+    background: #ffffff none repeat scroll 0 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    display: none;
+    padding: 20px;
+    position: absolute;
+    z-index: 499;
+}
+
+#zoom_img {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    border: 0;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+#zoom_close {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    left: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    background: url(images/closebox.png) no-repeat;
+}
+
+#zoom_spin {
+    position: absolute;
+    display: none;
+    z-index: 525;
+    width: 50px;
+    height: 50px;
+    background: url(images/spin.png) no-repeat;
+}
+
+#zoom_title {
+    text-align: center;
+    line-height: 1em;
+}
+
+/* End Zoom image */
